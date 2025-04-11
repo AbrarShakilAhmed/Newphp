@@ -6,6 +6,6 @@
     address: address,
   }
 }
-person1 = createPerson('abrar', 34, 'address');
+person1 = createPerson('abrar', 54, 'address');
 console.log(person1);
 </script>
