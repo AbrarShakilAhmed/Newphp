@@ -7,7 +7,5 @@
   }
 }
 person1 = createPerson('abrar', 34, 'address')
-console.log(person1)
-
-alert("working")
+console.log(person1);
 </script>
