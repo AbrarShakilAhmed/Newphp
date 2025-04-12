@@ -52,6 +52,51 @@
     border-radius: 9999px;
     overflow: hidden;
   }
+
+ .neon-button {
+  position: relative;
+  /* display: inline-block; */
+  padding: 12px 24px;
+  color: white;
+  background-color: #111;
+  font-weight: bold;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+  cursor: pointer;
+}
+
+.neon-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(270deg, cyan, violet, cyan);
+  background-size: 300% 300%;
+  border-radius: 12px;
+  z-index: -1;
+  animation: rotateBorder 4s linear infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  box-sizing: border-box;
+}
+
+@keyframes rotateBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
 </style>
 
 
@@ -68,7 +113,7 @@ bg-slate-950  shadow-md shadow-cyan-700 2xl:px-80 md:px-10 xl:px-20 ">
       <li><a href="#"class="mx-5 2xl:mx-10 hover:text-blue-700 my-5 inline-block">Home</a></li>
     </ul>
   </nav>
-  <button class="neon-border hidden md:block bg-cyan-700 text-white px-5 py-2 rounded-sm text-md ">Contact</button>
+  <button class="neon-button hidden md:block bg-cyan-700 text-white px-5 py-2 rounded-sm text-md ">Contact</button>
   <button id="ToggleMenu"  class=" neon-border md:hidden bg-cyan-400 text-white px-5 py-2 rounded-sm text-md">Menu</button>
 </div>
 <div class="hero-area py-20 xl:py-40 flex flex-col items-center md:flex-row justify-center ">
@@ -79,7 +124,12 @@ bg-slate-950  shadow-md shadow-cyan-700 2xl:px-80 md:px-10 xl:px-20 ">
     </div>
       <div class="hero-text  px-10 sm:px-20 md:max-w-1/2">
       <h1 class="text-3xl my-4 font-medium">Hey I am Abrar Shakil</h1>
-      <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum cumque a eius reprehenderit optio delectus necessitatibus exercitationem amet quaerat officia placeat, laboriosam velit labore consectetur. Blanditiis voluptatibus laborum minus inventore ullam! Nobis at illo est, perferendis ad sint, ipsam doloribus id officiis numquam delectus eius hic recusandae magnam modi, voluptatem rerum. Cupiditate dignissimos facere, tempora laudantium nostrum numquam, fuga maxime, labore exercitationem qui sapiente asperiores praesentium maiores eos soluta placeat?</p>
+      <p >I’m a full-stack developer with expertise in the MERN stack (MongoDB, Express.js, React, Node.js), C# with ASP.NET, and PHP with Laravel. I build scalable, high-performance web applications across different tech ecosystems. Whether it’s creating dynamic UIs, building robust APIs, or developing enterprise-level backend systems, I enjoy delivering clean, efficient solutions. I'm always exploring new tools and frameworks to stay sharp and deliver modern, user-focused experiences.</p>
+<button class="neon-button my-10 px-6 py-3 text-white font-semibold rounded-md relative z-10">
+  See More &nbsp; →
+</button>
+
+
 </div>
   </div>
 
