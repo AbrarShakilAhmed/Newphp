@@ -1,17 +1,7 @@
-function createPerson(name, age, address) {
-  return {
-    name,
-    age: age,
-    address: address,
-  }
-}
-person1 = createPerson('abrar', 34, 'address')
-console.log(person1)
+let toggleBtn = document.getElementById('ToggleMenu')
+let nav = document.getElementById('navigation')
 
-function contructerFunctionPerson(name, age) {
-  ;(this.name = name), (this.age = age)
-}
-
-person3 = new contructerFunctionPerson('abver', 324)
-
-console.log(person3.age)
+toggleBtn.addEventListener('click', () => {
+  nav.classList.toggle('hidden')
+  toggleBtn.innerText = nav.classList.contains('hidden') ? 'Menu' : 'Exit'
+})
