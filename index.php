@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="app.css">
   <title>Document</title>
    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+   <link rel="shortcut icon" href="./images.jpeg" type="image/x-icon">
 <style>
   .neon-border {
     position: relative;
