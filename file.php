@@ -3,7 +3,10 @@ if($_FILES["file"]["error"]==0){
 move_uploaded_file($_FILES["file"]['tmp_name'],"./UploadPhoto/".basename($_FILES["file"]["name"]));
 }
 
-setcookie('./UploadPhoto/'.basename($_FILES['file']['name']),"nameOfImg",time()+(90000),true)
+setcookie( "nameOfImg",($_FILES['file']['name']),time()+(90000),true);
+echo "<pre>";
+print_r($_COOKIE);
+echo "</pre>";
 
 ?>
 <!DOCTYPE html>
