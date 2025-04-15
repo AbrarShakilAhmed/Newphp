@@ -10,5 +10,6 @@
     <input type="file" name="file" id="" required>
     <button>Upload</button>
   </form>
+  <a href="./cookie/">Go Cookie</a>
 </body>
 </html>
