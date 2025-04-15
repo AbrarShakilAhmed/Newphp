@@ -7,6 +7,7 @@ move_uploaded_file($_FILES["file"]['tmp_name'],"./UploadPhoto/".basename($_FILES
 ?>
 <!DOCTYPE html>
 <html lang="en">
+  <link href="https://unpkg.com/mocha-css" rel="stylesheet" />
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
