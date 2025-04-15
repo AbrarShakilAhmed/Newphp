@@ -22,7 +22,7 @@
 
   if(isset($_REQUEST['button'])){
     if($_POST['button']=="set"){
-      setcookie("Password",$_POST['Pass'],time()+(900000),true);
+      setcookie("Password",$_POST['Pass'],time()+(20),true);
     }
     if($_POST['button']=="show"){
       echo $_COOKIE["Password"];
