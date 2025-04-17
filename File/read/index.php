@@ -4,5 +4,5 @@ echo fread($h, filesize("app.txt"));
 fclose($h);
 
 echo "something";
-echo "nOTHING";
+echo "trying";
 ?>
