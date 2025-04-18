@@ -20,18 +20,29 @@
   </form>
   <?php
 
-  if(isset($_REQUEST['button'])){
-    if($_POST['button']=="set"){
-      setcookie("Password",$_POST['Pass'],time()+(5),true);
-    }
-    if($_POST['button']=="show"){
-      echo $_COOKIE["Password"];
-    }
-    if($_POST['button']=="del"){
-      setcookie("Password",null,-1);
+if (isset($_POST['button'])) {
+    $button = $_POST['button'];
 
+    if ($button == "set" && isset($_POST['Pass'])) {
+        setcookie("Password", $_POST['Pass'], time() + 500000, "/");
+        echo "Password cookie set.";
     }
-  }
+
+    if ($button == "show") {
+        if (isset($_COOKIE['Password'])) {
+            echo "Stored password: " . $_COOKIE["Password"];
+        } else {
+            echo "No password cookie set.";
+        }
+    }
+
+    if ($button == "del") {
+        setcookie("Password", "", time() - 3600, "/");
+        echo "Password cookie deleted.";
+    }
+}
+
+
   include_once("./new.php");
   include_once("./new.php");
   include_once("./new.php");
